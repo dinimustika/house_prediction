@@ -6,31 +6,21 @@ Menentukan harga sewa atau harga jual rumah merupakan satu kegiatan yang memerlu
 
 ### Problem Statements
 
-<!-- Menjelaskan pernyataan masalah latar belakang: -->
 - Bagaimana cara menentukan harga jual atau harga sewa rumah?
 - Berapa harga kisaran untuk rumah dengan jumlah kamar tidur tertentu?
 - Fasilitas apa yang berpengaruh pada harga jual atau harga sewa rumah?
 
 ### Goals
 
-<!-- Menjelaskan tujuan dari pernyataan masalah: -->
 - Mengetahui cara menentukan harga jual dan/atau harga sewa rumah
 - Mengetahui kisaran harga untuk rumah dengan jumlah kamar tidur tertentu
 - Mengetahui fasilitas apa yang berpengaruh pada harga jual dan/atau harga sewa rumah
-
-<!-- Semua poin di atas harus diuraikan dengan jelas. Anda bebas menuliskan berapa pernyataan masalah dan juga goals yang diinginkan. -->
-
-<!-- **Rubrik/Kriteria Tambahan (Opsional)**:
-- Menambahkan bagian “Solution Statement” yang menguraikan cara untuk meraih goals. Bagian ini dibuat dengan ketentuan sebagai berikut:  -->
 
 ### Solution statements
 - Menggunakan algoritma K-Nearest Neighbors dan Random Forest untuk memprediksi harga dan/atau harga sewa rumah  
 
 ## Data Understanding
-<!-- Paragraf awal bagian ini menjelaskan informasi mengenai data yang Anda gunakan dalam proyek. Sertakan juga sumber atau tautan untuk mengunduh dataset. Contoh: [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/Restaurant+%26+consumer+data). -->
 Pada proyek kali ini, dataset yang digunakan adalah House Rent dataset yang didapatkan dari [Kaggle](https://www.kaggle.com/datasets/iamsouravbanerjee/house-rent-prediction-dataset)
-
-<!-- Selanjutnya uraikanlah seluruh variabel atau fitur pada data. Sebagai contoh:   -->
 
 ### Variabel-variabel pada House Rent dataset adalah sebagai berikut:
 - BHK: Jumlah Kamar Tidur, Aula, Dapur
@@ -44,8 +34,6 @@ Pada proyek kali ini, dataset yang digunakan adalah House Rent dataset yang dida
 - Tenant Preferred: Jenis Tenant yang lebih disukai oleh Pemilik
 - Bathroom: Jumlah Kamar Mandi
 - Point of Contact: Siapa yang harus Anda hubungi untuk informasi lebih lanjut mengenai Rumah/Apartemen/Rumah Susun
-<!-- **Rubrik/Kriteria Tambahan (Opsional)**:
-- Melakukan beberapa tahapan yang diperlukan untuk memahami data, contohnya teknik visualisasi data atau exploratory data analysis. -->
 
 ### Exploratory Data Analysis
 Untuk melakukan proses investigasi awal pada data untuk menganalisis karakteristik, menemukan pola, anomali, dan memeriksa asumsi pada data, saya menggunakan EDA. 
@@ -76,7 +64,6 @@ Dibawah ini menunjukkan pengaruh harga sewa terhadap masing-masing fitur <br>
 
 
 ## Data Preparation
-<!-- Pada bagian ini Anda menerapkan dan menyebutkan teknik data preparation yang dilakukan. Teknik yang digunakan pada notebook dan laporan harus berurutan. -->
 
 1. Encoding fitur kategori <br>
 Bagian ini akan membuat variabel kategori kita telah berubah menjadi variabel numerik
@@ -93,13 +80,7 @@ Bentuk deskriptif data setelah distandarisasi <br>
 ![image](https://user-images.githubusercontent.com/73211764/190624502-06aa5415-d87c-4200-8dad-3f20aa2946b6.png)
 
 
-<!-- **Rubrik/Kriteria Tambahan (Opsional)**: 
-- Menjelaskan proses data preparation yang dilakukan
-- Menjelaskan alasan mengapa diperlukan tahapan data preparation tersebut. -->
-
 ## Modeling
-
-<!-- Tahapan ini membahas mengenai model machine learning yang digunakan untuk menyelesaikan permasalahan. Anda perlu menjelaskan tahapan dan parameter yang digunakan pada proses pemodelan. -->
 
 1. K-Nearest Neighbors <br>
 KNN adalah algoritma yang relatif sederhana dibandingkan dengan algoritma lain. Algoritma KNN menggunakan ‘kesamaan fitur’ untuk memprediksi nilai dari setiap data yang baru. Dengan kata lain, setiap data baru diberi nilai berdasarkan seberapa mirip titik tersebut dalam set pelatihan. <br>
@@ -121,7 +102,7 @@ Kekurangan:
 - Tidak dapat menangani missing values dengan baik
 
 2. Random Forest <br>
-Random forest merupakan salah satu model machine learning yang termasuk ke dalam kategori ensemble (group) learning. Pada proyek kali ini, teknik ensemble yang digunakan adalah bootstrap <br>
+Random forest merupakan salah satu model machine learning yang termasuk ke dalam kategori ensemble (group) learning. Dalam random forest teknik pendekatan ensemble dikenal dengan bagging dan boosting. Pada proyek kali ini saya menggunakan bagging <br>
 ![image](https://user-images.githubusercontent.com/73211764/190625987-7b1c03c6-ace7-4abe-9359-abbb087c6894.png) <br>
   
 Kelebihan dari Random Forest adalah: <br>
@@ -140,13 +121,6 @@ Kelebihan dari Random Forest adalah: <br>
   - Muncul sebagai Black Box: Sulit untuk mengetahui apa yang terjadi.
 
 
-
-
-<!-- **Rubrik/Kriteria Tambahan (Opsional)**: 
-- Menjelaskan kelebihan dan kekurangan dari setiap algoritma yang digunakan.
-- Jika menggunakan satu algoritma pada solution statement, lakukan proses improvement terhadap model dengan hyperparameter tuning. **Jelaskan proses improvement yang dilakukan**.
-- Jika menggunakan dua atau lebih algoritma pada solution statement, maka pilih model terbaik sebagai solusi. **Jelaskan mengapa memilih model tersebut sebagai model terbaik**. -->
-
 ## Evaluation
 Metrik yang akan saya gunakan pada prediksi ini adalah MSE atau Mean Squared Error yang menghitung jumlah selisih kuadrat rata-rata nilai sebenarnya dengan nilai prediksi. <br>
 ![image](https://user-images.githubusercontent.com/73211764/190628136-59fa90c9-8700-420e-836e-053ec73a3fa7.png) <br>
@@ -156,10 +130,4 @@ Tampilan menggunakan bar chart <br>
 Hasil prediksi diantara dua model: <br>
 ![image](https://user-images.githubusercontent.com/73211764/190628431-9c6fb481-047f-4f74-9053-292e1f4578a8.png)
 
-<!-- Pada bagian ini anda perlu menyebutkan metrik evaluasi yang digunakan. Lalu anda perlu menjelaskan hasil proyek berdasarkan metrik evaluasi yang digunakan.
-
-Sebagai contoh, Anda memiih kasus klasifikasi dan menggunakan metrik **akurasi, precision, recall, dan F1 score**. Jelaskan mengenai beberapa hal berikut:
-- Penjelasan mengenai metrik yang digunakan
-- Menjelaskan hasil proyek berdasarkan metrik evaluasi
-
-Ingatlah, metrik evaluasi yang digunakan harus sesuai dengan konteks data, problem statement, dan solusi yang diinginkan. -->
+Dengan ini, dapat dikatakan bahwa algoritma Random Forest mendapatkan hasil prediksi yang lebih baik dibandingkan dengan algoritma KNN
