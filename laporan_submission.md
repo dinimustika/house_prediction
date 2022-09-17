@@ -132,7 +132,7 @@ Kelebihan dari *Random Forest* adalah: <br>
 
 
 ## Evaluation
-Metrik yang akan saya gunakan pada prediksi ini adalah MSE atau *Mean Squared Error* yang menghitung jumlah selisih kuadrat rata-rata nilai sebenarnya dengan nilai prediksi. <br>
+Metrik yang akan saya gunakan pada prediksi ini adalah MSE atau *Mean Squared Error* yang menghitung jumlah selisih kuadrat rata-rata nilai sebenarnya dengan nilai prediksi. Semakin tinggi nilai yang didapat maka semakin buruk model tersebut. Sebagai perbandingan, nilai MSE dari RF lebih kecil jika dibandingkan dengan KNN<br>
 ![image](https://user-images.githubusercontent.com/73211764/190628136-59fa90c9-8700-420e-836e-053ec73a3fa7.png) <br>
 Tampilan menggunakan bar chart <br>
 ![image](https://user-images.githubusercontent.com/73211764/190628288-26b9c083-7ab1-4976-b420-f003ebde962e.png)
@@ -143,10 +143,11 @@ Hasil prediksi diantara dua model: <br>
 Dengan ini, dapat dikatakan bahwa algoritma *Random Forest* mendapatkan hasil prediksi yang lebih baik dibandingkan dengan algoritma KNN
 
 Referensi: <br>
-[1]  Sergey. arayev, et al. (2021). "Full Stack Deep Learning". [Online]. Diakses pada 29 mei 2021. <br>
-[2] Rogati, Monica. "The AI Hierarchy of Needs". Diakses pada 29 Mei 2021. <br>
+[1]  Sergey. arayev, et al. (2021). "Full Stack Deep Learning". [Online]. Diakses pada 17 September 2022. <br>
+[2] Rogati, Monica. "The AI Hierarchy of Needs". Diakses pada 17 September 2022. <br>
 [3] Gabor Mellis, et al. “On the State of the Art of Evaluation in Neural Language Models”. 2018. ICLR. <br>
 [4] Kelleher, John D, et al. "Machine Learning for Predictive Data Analytics". MIT Press. 2020. <br>
-[5] IBM Cloud. "Exploratory Data Analysis". Diakses pada 2 Juni 2021. <br>
-[6] Kang, Hyun. "The Prevention and Handling the Missing Data". Diakses pada Juni 2021. <br>
+[5] IBM Cloud. "Exploratory Data Analysis". Diakses pada 17 September 2022. <br>
+[6] Kang, Hyun. "The Prevention and Handling the Missing Data". Diakses pada 17 September 2022. <br>
 [7] Kuhn, Max dan Johnson Kjell. "Applied Predictive Modeling". Springer. 2013. <br>
+[8] Gupta, Shailaja. "Pros and cons of various Machine Learning algorithms". Diakses 17 September 2022 <br>
